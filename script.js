@@ -36,6 +36,8 @@ function guessCorrect(guess) {
     const list = document.querySelector("#guess-list");
     list.insertAdjacentHTML("beforeend", `<li>you guessed ${guess}, correct!</li>`);
 
+    document.querySelector("#guess-form").remove();
+
 }
 
 function guessTooHigh(guess) {
