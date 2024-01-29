@@ -17,6 +17,8 @@ function generateNumber() {
 function receiveGuess(event) {
   event.preventDefault();
   const guess = document.querySelector("#guess").valueAsNumber;
+  const form = document.querySelector("#guess-form");
+  form.reset();
   console.log(guess);
   checkGuess(guess);
 }
