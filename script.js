@@ -4,6 +4,8 @@ window.addEventListener("load", start);
 
 let number;
 
+const random = Math.floor(Math.random() * 99) + 1;
+
 function start() {
   console.log("JS kører");
   number = generateNumber();
@@ -11,7 +13,8 @@ function start() {
 }
 
 function generateNumber() {
-  return 42;
+    console.log("Generating number", random);
+  return random;
 }
 
 function receiveGuess(event) {
