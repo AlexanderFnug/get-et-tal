@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Guess the number</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Guess the number</h1>
+    <h3>welcome! guess a number between 1-100</h3>
+
+    <ul id="guess-list">
+      <li>you guessed too high</li>
+      <li>you guessed too low</li>
+    </ul>
+
+    <form action="" id="guess-form">
+      <label for=""
+        >your guess:
+
+        <input
+          type="number"
+          id="guess"
+          name="guess"
+          min="1"
+          max="100"
+          required
+        />
+      </label>
+      <button id="guess-button">guess</button>
+    </form>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
