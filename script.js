@@ -23,16 +23,30 @@ function receiveGuess(event) {
 
 function checkGuess(guess) {
     if (guess === number) {
-        guessCorrect();
+        guessCorrect(guess);
     } else if (guess > number) {
-        guessTooHigh();
+        guessTooHigh(guess);
     } else {
-        guessTooLow();
+        guessTooLow(guess);
     }
 }
 
-function guessCorrect() {}
+function guessCorrect(guess) {
+    console.log("Correct");
+    const list = document.querySelector("#guess-list");
+    list.insertAdjacentHTML("beforeend", `<li>you guessed ${guess}, correct!</li>`);
 
-function guessTooHigh() {}
+}
 
-function guessTooLow() {}
+function guessTooHigh(guess) {
+    console.log("Too high");
+    const list = document.querySelector("#guess-list");
+    list.insertAdjacentHTML("beforeend", `<li>you guessed ${guess}, too high!</li>`);
+}
+
+function guessTooLow(guess) {
+    console.log("Too low");
+    const list = document.querySelector("#guess-list");
+    list.insertAdjacentHTML("beforeend", `<li>you guessed ${guess}, too low!</li>`);
+
+}
